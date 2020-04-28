@@ -1,35 +1,36 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
-
+import styled from 'styled-components';
 import { Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { Grid, Container, Header, Divider } from 'semantic-ui-react';
 
 import history from '../../modules/history';
-
 import Home from '../Home';
 
-import GlobalStyles from '../../components/GlobalStyles';
+const Wrapper = styled.div`
+  margin-top: 3rem;
+`;
 
 const App = () => {
   return (
     <Router history={history}>
       <Helmet />
-      <GlobalStyles />
-      <Container maxWidth="md">
-        <Box my={8}>
-          <Typography variant="h1" component="h1" gutterBottom>
-            React Redux Material Starter
-          </Typography>
-          <Switch>
-            <Route path="/" exact component={Home} />
-          </Switch>
-        </Box>
-      </Container>
+      <Wrapper>
+        <Container>
+          <Grid columns="1" stackable>
+            <Grid.Column>
+              <Grid.Row>
+                <Header as="h1">React Redux Starter</Header>
+                <Divider />
+              </Grid.Row>
+              <Switch>
+                <Route path="/" exact component={Home} />
+              </Switch>
+            </Grid.Column>
+          </Grid>
+        </Container>
+      </Wrapper>
     </Router>
   );
 };
