@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import configureStore from './store/index';
 import history from './modules/history';
-import theme from './modules/theme';
 
 import App from './containers/App';
 
