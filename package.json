@@ -1,5 +1,6 @@
 {
-  "name": "react-redux-saga-starter",
+  "name": "react-redux-starter",
+  "title": "React Redux Starter",
   "version": "2020.10.0",
   "description": "Starter project with React and Redux with Redux Saga",
   "keywords": [
